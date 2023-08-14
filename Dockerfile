@@ -1,4 +1,4 @@
-FROM node:18
+FROM node:18-bullseye-slim
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -16,4 +16,4 @@ RUN npm install
 COPY . .
 
 EXPOSE 8080
-CMD [ "node", "index.js" ]
+CMD [ "node", "server.js" ]

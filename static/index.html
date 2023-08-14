@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1>Chyt co nejvic HELPNI projektu! <span class="score">0</span></h1>
+  <h2 class="countdown">15</h2>
+  <div class="modal">
+    <div id="welcome" class="modal-content">
+      <h1>Buď nejlepší HELPAŘ!</h1>
+      <p>Ukaž kolik zvládneš "ulovit" víkendovek. Ukaž, co v Tobě je!</p>
+      <button onClick="startGame()">Start!</button>
+    </div>
+    <div id="yourscore" class="modal-content hidden">
+      <h1>Tvoje skore je <span class="score">0</span> 🥳 </h1>
+      <p>Tak virtuálně by Ti to šlo! Tak co takhle to zkusit někdy offline a zapsat si opravdovou víkendovku do svého osobního skóre? 🤩 🔥</p>
+      <p>Sdílej svoje skóre s ostatníma! 💪 (email neukazujeme)</p>
+      <input type="text" id="name" placeholder="Tvoje jmeno">
+      <input type="email" id="email" placeholder="Email">
+      <button onClick="saveScore()">Sdílet!</button>
+    </div>
+    <div id="scoreboard" class="modal-content hidden">
+      <h1>Nejlepší HELPAŘI</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Jméno</th>
+            <th>Skore</th>
+          </tr>
+        </thead>
+        <tbody id="scoreboard-body">
+        </tbody>
+      </table>
+      <button onClick="startGame()">Začít znovu!</button>
+    </div>
+  </div>
+  <div class="game">
+    <div class="hole hole1">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole2">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole3">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole4">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole5">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole6">
+      <div class="mole"></div>
+    </div>
+  </div>
+</body>
+
+</html>
