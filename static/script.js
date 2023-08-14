@@ -6,7 +6,7 @@ const welcomeDiv = document.querySelector('#welcome');
 const yourscoreDiv = document.querySelector('#yourscore');
 const scoreboardDiv = document.querySelector('#scoreboard');
 
-const SERVER_URL = 'https://score.helpni.cz:3000/score';
+const SERVER_URL = 'https://score.helpni.cz/score';
 
 let lastHole;
 let timeUp = false;
@@ -102,7 +102,7 @@ async function saveScore() {
     const scoreboardElement = document.querySelector('#scoreboard-body');
     scoreboardElement.innerHTML = '';
     board.forEach((score, index) => {
-      scoreboardElement.innerHTML += `<tr><td>${index + 1}</td><td>${score.name}</td><td>${score.email}</td><td>${score.score}</td></tr>`;
+      scoreboardElement.innerHTML += `<tr><td>${index + 1}</td><td>${score.name}</td><td>${score.score}</td></tr>`;
     });
 
   } catch (error) {
