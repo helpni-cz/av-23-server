@@ -46,7 +46,7 @@ function startGame() {
   timeUp = false;
   score = 0;
   peep();
-  countdown = 3; // Set the countdown
+  countdown = 15; // Set the countdown
   const countdownElement = document.querySelector('.countdown'); // Get the countdown element
   countdownElement.textContent = countdown; // Display the countdown
   const intervalId = setInterval(() => { // Start the countdown
