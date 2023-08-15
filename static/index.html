@@ -13,36 +13,48 @@
 </head>
 
 <body>
-  <h1>Chyt co nejvic HELPNI projektu! <span class="score">0</span></h1>
-  <h2 class="countdown">15</h2>
+  <div class="gameStats">
+    <div><h2>Skóre</h2><h3 class="score">0</h3></div>
+    <div><h2>Čas</h2><h3 class="countdown red">15</h3></div>
+  </div>
   <div class="modal">
     <div id="welcome" class="modal-content">
-      <h1>Buď nejlepší HELPAŘ!</h1>
+      <img src="./logo.svg" width="30%"/>
+      <h1 style="margin-bottom: 2px;">Buď nejlepší HELPAŘ!</h1>
+      <img src="./hearts.svg" width="40%"/>
       <p>Ukaž kolik zvládneš "ulovit" víkendovek. Ukaž, co v Tobě je!</p>
+      <p>Návod: Klikni na logo HELPNI, které se objeví nad farností a zúčastni se takto akce! Ať Ti ani jedna neunikne!</p>
       <button onClick="startGame()">Start!</button>
     </div>
     <div id="yourscore" class="modal-content hidden">
-      <h1>Tvoje skore je <span class="score">0</span> 🥳 </h1>
-      <p>Tak virtuálně by Ti to šlo! Tak co takhle to zkusit někdy offline a zapsat si opravdovou víkendovku do svého osobního skóre? 🤩 🔥</p>
-      <p>Sdílej svoje skóre s ostatníma! 💪 (email neukazujeme)</p>
-      <input type="text" id="name" placeholder="Tvoje jmeno">
-      <input type="email" id="email" placeholder="Email">
-      <button onClick="saveScore()">Sdílet!</button>
+      <img src="./stars.svg" width="70%"/>
+      <h1 style="margin-top: 4px;"><span class="score">0</span></h1>
+      <p>Virtuálně by Ti to šlo! <br /><b>Co takhle to zkusit někdy offline a zapsat si opravdovou víkendovku do svého osobního skóre?</b> 🤩 🔥</p>
+      <p>Sdílej svoje skóre s ostatníma! 💪</p>
+      <p class="emailInfo">Zadáním svého jména a emailu souhlasíš se zpracováním v rámci GDPR 😅 Pokud budeš mezi 10. nejlepšími, ukážeme světu Tvé jméno! Email máme na další propagaci, pokud dovolíš :) </p>
+      <div class="share">
+        <input type="text" id="name" placeholder="Tvoje jméno 😍" maxlength="100">
+        <input type="email" id="email" placeholder="Email (pisneme Ti jednou 😇)" maxlength="100">
+        <button onClick="saveScore()">Sdílet!</button>
+        <button class="secondary" onClick="startGame()">Zkusit znovu!</button>
+        <span class="info">Víc na <a href="https://helpni.cz" target="_blank">Helpni.cz</a></span>
+      </div>
     </div>
     <div id="scoreboard" class="modal-content hidden">
       <h1>Nejlepší HELPAŘI</h1>
+      <img src="./stars.svg" width="70%"/>
       <table>
         <thead>
           <tr>
             <th>#</th>
-            <th>Jméno</th>
-            <th>Skore</th>
+            <th class="name">Jméno</th>
+            <th>Skóre</th>
           </tr>
         </thead>
         <tbody id="scoreboard-body">
         </tbody>
       </table>
-      <button onClick="startGame()">Začít znovu!</button>
+      <button onClick="startGame()">Chci být mezi němi!</button>
     </div>
   </div>
   <div class="game">

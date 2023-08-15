@@ -17,7 +17,7 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 2.5rem; /* Increased font size */
+  font-size: 2rem; /* Increased font size */
   margin-bottom: 1rem; /* Increased margin */
   font-weight: 800;
 }
@@ -28,11 +28,18 @@ h2 {
   margin-bottom: 1rem; /* Increased margin */
 }
 
+.gameStats h2 {
+  margin: 0.7rem;
+}
+.gameStats h3 {
+  margin: 0rem;
+}
+
 .countdown {
-  font-size: 3em;
-  color: #007BFF;
-  text-align: center;
-  margin-bottom: 2rem; /* Added margin for spacing */
+  background: rgba(0, 123, 255, 0.1); /* Adjusted background color */
+  padding: 0.5rem 3rem; /* Adjusted padding */
+  border-radius: 1rem;
+  color: #007BFF; /* Adjusted color */
 }
 
 .score {
@@ -93,6 +100,8 @@ button {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-bottom: 4px;
+  font-weight: 600;
 }
 
 button:hover {
@@ -101,6 +110,27 @@ button:hover {
 
 button:active {
   background-color: #003d80;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+button.secondary {
+  font-size: 1em;
+  padding: 10px 20px;
+  color: #027bff;
+  background-color: rgba(0, 123, 255, 0.1);
+  border: 1px solid #7abaff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.secondary:hover {
+  background-color: #e2effc;
+}
+
+button.secondary:active {
+  background-color: #f4f9ff;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
@@ -131,6 +161,73 @@ button:active {
   text-align: center;
 }
 
+.share {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-direction: column;
+}
+
 .hidden {
   display: none;
+}
+
+input {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+    margin: 10px 0;
+}
+
+input:focus {
+    border-color: #007BFF; /* Change this color to fit your theme */
+}
+
+a {
+  display: inline;
+  text-decoration: none;
+  background-image: linear-gradient(transparent, transparent),linear-gradient(transparent, transparent),linear-gradient(to right, #e83030, #2208b4);
+  background-repeat: no-repeat;
+  background-position: 120%, 122%, 0 130%;
+  background-size: 100% 7px;
+}
+
+span.info {
+  margin-top: 10px
+}
+
+.gameStats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+td.name, th.name {
+  text-align: left;
+  font-weight: 600;
+}
+
+td.score {
+  color: #0056b3;
+  font-weight: 600;
+  background: rgba(0, 123, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+
+table {
+  width: 100%;
+}
+
+.emailInfo {
+  color: rgb(89, 89, 89);
+  font-size: smaller;
+  font-style: italic;
+}
+
+.red {
+  color: red
 }

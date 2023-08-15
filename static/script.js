@@ -6,7 +6,11 @@ const welcomeDiv = document.querySelector('#welcome');
 const yourscoreDiv = document.querySelector('#yourscore');
 const scoreboardDiv = document.querySelector('#scoreboard');
 
-const SERVER_URL = 'https://score.helpni.cz/score';
+const SERVER_URL = 'http://localhost:3000/score';
+
+console.log("🙏🙏🙏🙏🙏🙏🙏")
+console.log("NO CHEATING!")
+console.log("🙏🙏🙏🙏🙏🙏🙏")
 
 let lastHole;
 let timeUp = false;
@@ -28,7 +32,7 @@ function randomHole(holes) {
 }
 
 function peep() {
-  const time = randomTime(400, 1000);
+  const time = randomTime(350, 900);
   const hole = randomHole(holes);
   hole.classList.add('up');
   moles.forEach(mole => mole.isHit = false); // reset all moles to not-hit
@@ -102,7 +106,7 @@ async function saveScore() {
     const scoreboardElement = document.querySelector('#scoreboard-body');
     scoreboardElement.innerHTML = '';
     board.forEach((score, index) => {
-      scoreboardElement.innerHTML += `<tr><td>${index + 1}</td><td>${score.name}</td><td>${score.score}</td></tr>`;
+      scoreboardElement.innerHTML += `<tr><td>${index + 1}.</td><td class="name">${score.name}</td><td class="score">${score.score}</td></tr>`;
     });
 
   } catch (error) {
