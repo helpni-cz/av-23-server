@@ -23,7 +23,13 @@ app.get('/score', cors(corsOptions), async (req, res, next) => {
   try {
     const data = await fs.readFile('highscores.json', 'utf8');
     const scores = JSON.parse(data);
-    res.json(scores.slice(0, 10));
+    // Remove email from each object
+    const updatedScores = scores.map(item => {
+      const { email, ...rest } = item;
+      return rest;
+    });
+
+    res.json(updatedScores.slice(0, 10));
   } catch (error) {
     next(error);
   }
