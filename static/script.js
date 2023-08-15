@@ -6,7 +6,7 @@ const welcomeDiv = document.querySelector('#welcome');
 const yourscoreDiv = document.querySelector('#yourscore');
 const scoreboardDiv = document.querySelector('#scoreboard');
 
-const SERVER_URL = 'http://localhost:3000/score';
+const SERVER_URL = 'https://game.helpni.cz:3000/score';
 
 console.log("🙏🙏🙏🙏🙏🙏🙏")
 console.log("NO CHEATING!")
