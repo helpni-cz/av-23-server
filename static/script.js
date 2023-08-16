@@ -6,7 +6,7 @@ const welcomeDiv = document.querySelector('#welcome');
 const yourscoreDiv = document.querySelector('#yourscore');
 const scoreboardDiv = document.querySelector('#scoreboard');
 
-const SERVER_URL = 'https://game.helpni.cz:3000/score';
+const SERVER_URL = 'https://game.helpni.cz/score';
 
 console.log("🙏🙏🙏🙏🙏🙏🙏")
 console.log("NO CHEATING!")
@@ -81,7 +81,7 @@ async function saveScore() {
   const name = document.querySelector('#name').value;
   const email = document.querySelector('#email').value;
 
-  const scoreData = { name, email, score };
+  const scoreData = { name, email, score, date: new Date() };
   try {
     const response = await fetch(SERVER_URL, {
       method: 'POST',

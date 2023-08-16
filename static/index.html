@@ -23,21 +23,22 @@
       <h1 style="margin-bottom: 2px;">Buď nejlepší HELPAŘ!</h1>
       <img src="./hearts.svg" width="40%"/>
       <p>Ukaž kolik zvládneš "ulovit" víkendovek. Ukaž, co v Tobě je!</p>
-      <p>Návod: Klikni na logo HELPNI, které se objeví nad farností a zúčastni se takto akce! Ať Ti ani jedna neunikne!</p>
+      <p><b>Návod:</b> Klikni na logo HELPNI, které se objeví nad farností a zúčastni se takto akce! Ať Ti ani jedna neunikne!</p>
       <button onClick="startGame()">Start!</button>
+      <span class="info">Víc o projektu na <a href="https://helpni.cz" target="_blank">Helpni.cz</a></span>
     </div>
     <div id="yourscore" class="modal-content hidden">
       <img src="./stars.svg" width="70%"/>
       <h1 style="margin-top: 4px;"><span class="score">0</span></h1>
-      <p>Virtuálně by Ti to šlo! <br /><b>Co takhle to zkusit někdy offline a zapsat si opravdovou víkendovku do svého osobního skóre?</b> 🤩 🔥</p>
+      <p>Virtuálně by Ti to šlo! <br /><b>Co takhle to zkusit někdy offline a zapsat si opravdovou víkendovku do svého osobního skóre?</b> 🔥</p>
       <p>Sdílej svoje skóre s ostatníma! 💪</p>
-      <p class="emailInfo">Zadáním svého jména a emailu souhlasíš se zpracováním v rámci GDPR 😅 Pokud budeš mezi 10. nejlepšími, ukážeme světu Tvé jméno! Email máme na další propagaci, pokud dovolíš :) </p>
+      <p class="emailInfo">Pokud budeš mezi 10. nejlepšími, ukážeme světu Tvé jméno! Email máme na další propagaci, pokud dovolíš :) </p>
       <div class="share">
-        <input type="text" id="name" placeholder="Tvoje jméno 😍" maxlength="100">
-        <input type="email" id="email" placeholder="Email (pisneme Ti jednou 😇)" maxlength="100">
+        <input type="text" id="name" placeholder="Tvé jméno borče/borkyně!" maxlength="100">
+        <input type="email" id="email" placeholder="Email (pisneme Ti jednou)" maxlength="100">
         <button onClick="saveScore()">Sdílet!</button>
         <button class="secondary" onClick="startGame()">Zkusit znovu!</button>
-        <span class="info">Víc na <a href="https://helpni.cz" target="_blank">Helpni.cz</a></span>
+        <span class="info">Víc o projektu na <a href="https://helpni.cz" target="_blank">Helpni.cz</a></span>
       </div>
     </div>
     <div id="scoreboard" class="modal-content hidden">
@@ -55,6 +56,8 @@
         </tbody>
       </table>
       <button onClick="startGame()">Chci být mezi němi!</button>
+      <p class="emailInfo">Výherce ceny budeme vyhlašovat v sobotu v 22:00, víc info v appce AV23! </p>
+      <span class="info">Víc o projektu na <a href="https://helpni.cz" target="_blank">Helpni.cz</a></span>
     </div>
   </div>
   <div class="game">
